@@ -8,7 +8,7 @@ import "./App.css";
 const gateInfo = {
   H: {
     title: "Hadamard Gate (H)",
-    img: "public/images/hadamard.png",
+    img: "/images/hadamard.png",
     desc: "Creates superposition — puts qubit into a 'coin toss' state."
   },
   X: {
