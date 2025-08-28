@@ -8,22 +8,22 @@ import "./App.css";
 const gateInfo = {
   H: {
     title: "Hadamard Gate (H)",
-    img: "/gates/hadamard.png",
+    img: "/images/hadamard.png",
     desc: "Creates superposition — puts qubit into a 'coin toss' state."
   },
   X: {
     title: "Pauli-X Gate",
-    img: "/gates/pauli-x.png",
+    img: "/images/pauli-x.png",
     desc: "Flips |0⟩ ↔ |1⟩, like a NOT gate."
   },
   Z: {
     title: "Pauli-Z Gate",
-    img: "/gates/pauli-z.png",
+    img: "/images/pauli-z.png",
     desc: "Flips the phase of |1⟩, keeps |0⟩ unchanged."
   },
   CNOT: {
     title: "CNOT Gate",
-    img: "/gates/cnot.png",
+    img: "/images/cnot.png",
     desc: "If control qubit = 1, flips target qubit. Used to entangle."
   }
 };
@@ -108,7 +108,7 @@ const BitsSelector = ({ value, onChange }) => {
 
 const ProgressBar = ({ percent }) => (
   <div className="progress" aria-label="Success rate">
-    <div className="progress-bar" style={{ width: `${percent}%` }} />
+    <div className="progress-bar" style={{ width: $`{percent}%` }} />
   </div>
 );
 
@@ -192,7 +192,7 @@ const [selectedGate, setSelectedGate] = useState(null);
     setLoading(true);
     setError("");
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/send", {
+      const res = await axios.post("https://aqvh-backend.onrender.com/api/send", {
         bits,
         shots: Number(shots),
       });
