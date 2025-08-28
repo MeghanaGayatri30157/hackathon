@@ -9,6 +9,20 @@
   transition: transform .15s;
 }
 .btn:hover { transform: translateY(-1px); }
+/* Gate images in modal / cards */
+.gate-img {
+  width: 280px;       /* or smaller: 60px */
+  height: 280px;      /* keeps them square */
+  object-fit: contain; /* no stretching */
+  display: block;
+  margin: 8px auto;
+}
+@media (max-width: 600px) {
+  .gate-img {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .btn-outline {
   background: transparent;

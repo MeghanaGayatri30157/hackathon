@@ -8,22 +8,22 @@ import "./App.css";
 const gateInfo = {
   H: {
     title: "Hadamard Gate (H)",
-    img: "/images/hadamard.png",
+    img: "public/images/hadamard.png",
     desc: "Creates superposition — puts qubit into a 'coin toss' state."
   },
   X: {
     title: "Pauli-X Gate",
-    img: "/images/pauli-x.png",
+    img: "public/images/pauli-x.png",
     desc: "Flips |0⟩ ↔ |1⟩, like a NOT gate."
   },
   Z: {
     title: "Pauli-Z Gate",
-    img: "/images/pauli-z.png",
+    img: "public/images/pauli-z.png",
     desc: "Flips the phase of |1⟩, keeps |0⟩ unchanged."
   },
   CNOT: {
     title: "CNOT Gate",
-    img: "/images/cnot.png",
+    img: "public/images/cnot.png",
     desc: "If control qubit = 1, flips target qubit. Used to entangle."
   }
 };
@@ -108,7 +108,7 @@ const BitsSelector = ({ value, onChange }) => {
 
 const ProgressBar = ({ percent }) => (
   <div className="progress" aria-label="Success rate">
-    <div className="progress-bar" style={{ width: $`{percent}%` }} />
+    <div className="progress-bar" style={{ width: `${percent}%` }} />
   </div>
 );
 
@@ -328,7 +328,7 @@ const [selectedGate, setSelectedGate] = useState(null);
   <div className="modal">
     <div className="modal-content">
       <h3>{gateInfo[selectedGate].title}</h3>
-      <img src={gateInfo[selectedGate].img} alt={selectedGate} />
+      <img src={gateInfo[selectedGate].img} alt={selectedGate} className="gate-img"  />
       <p>{gateInfo[selectedGate].desc}</p>
       <button onClick={() => setSelectedGate(null)}>Close</button>
     </div>
