@@ -1,0 +1,118 @@
+/* Buttons */
+.btn {
+  background: linear-gradient(90deg, #0070f3, #00e0ff);
+  color: #fff;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .15s;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  color: #00e0ff;
+  border: 1.5px solid rgba(0,224,255,0.6);
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Header */
+.page-header {
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+  margin-bottom: 14px;
+}
+.header-actions { display:flex; gap: 10px; align-items:center; }
+
+/* Toggle */
+.toggle { display:flex; gap:8px; align-items:center; }
+
+/* Error banner */
+.error-banner {
+  background: rgba(255, 64, 64, 0.12);
+  color: #ff8080;
+  border: 1px solid rgba(255,64,64,0.35);
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 10px 0 18px;
+}
+
+/* Bit selector */
+.bit-grid {
+  display:grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+.btn-bit {
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(0, 224, 255, 0.35);
+  border-radius: 12px;
+  padding: 12px;
+  text-align:left;
+  display:flex; align-items:center; gap:10px;
+  cursor:pointer;
+}
+.btn-bit.active {
+  border-color:#00e0ff;
+  box-shadow: 0 0 10px rgba(0,224,255,0.25);
+}
+.bit-dot { filter: drop-shadow(0 0 6px rgba(0,224,255,0.6)); }
+.bit-label { font-weight:600; }
+
+/* Inputs */
+.shots-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+}
+.mt-16 { margin-top: 16px; }
+
+/* Info / glossary */
+.info {
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(0, 224, 255, 0.35);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.details summary {
+  cursor: pointer;
+  color:#00e0ff;
+  margin-bottom: 8px;
+}
+.glossary ul { margin: 8px 0 0 18px; }
+.muted { color: #aaa; }
+
+/* Progress bar */
+.progress {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.09);
+  overflow: hidden;
+  border: 1px solid rgba(0,224,255,0.25);
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0070f3, #00e0ff);
+  transition: width .45s ease;
+}
+
+/* Sub-cards */
+.card.sub { min-width: 280px; }
+
+/* Explanation layout */
+.explain-grid {
+  display:grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+}
+@media (max-width: 720px) {
+  .explain-grid { grid-template-columns: 1fr; }
+  .bit-grid { grid-template-columns: 1fr 1fr; }
+}
