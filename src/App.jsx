@@ -460,13 +460,13 @@ const [selectedGate, setSelectedGate] = useState(null);
                   <summary>Show step-by-step explanation</summary>
                   <ol>
                     <li>
-                      <b>Entanglement</b> via H on q0 then CNOT(q0→q1).
+                      <b>Entanglement</b> Like two walkie-talkies instantly sharing a secret code, entanglement connects qubits so their states are linked no matter the distance.
                     </li>
                     <li>
-                      <b>Encoding</b> on Alice (q0): 00→I, 01→Z, 10→X, 11→XZ.
+                      <b>Encoding</b> Just as you encrypt a message before sending it, encoding uses quantum gates to prepare qubits with information for secure transmission.
                     </li>
                     <li>
-                      <b>Decoding</b> on Bob: CNOT(q0→q1) then H on q0; measure.
+                      <b>Decoding</b> Like unlocking a safe with a key, decoding applies gates to retrieve the original message from the quantum state.
                     </li>
                   </ol>
                 </details>
