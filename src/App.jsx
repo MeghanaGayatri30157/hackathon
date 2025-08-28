@@ -4,29 +4,30 @@ import Joyride from "react-joyride";
 import { motion, AnimatePresence } from "framer-motion";
 import "./App.css";
 
-
+const base = import.meta.env.BASE_URL;
 const gateInfo = {
   H: {
     title: "Hadamard Gate (H)",
-    img: "/images/hadamard.png",
+    img: `${base}images/hadamard.png`,
     desc: "Creates superposition — puts qubit into a 'coin toss' state."
   },
   X: {
     title: "Pauli-X Gate",
-    img: "public/images/pauli-x.png",
+    img: `${base}/images/pauli-x.png`,
     desc: "Flips |0⟩ ↔ |1⟩, like a NOT gate."
   },
   Z: {
     title: "Pauli-Z Gate",
-    img: "public/images/pauli-z.png",
+    img: `${base}/images/pauli-z.png`,
     desc: "Flips the phase of |1⟩, keeps |0⟩ unchanged."
   },
   CNOT: {
     title: "CNOT Gate",
-    img: "public/images/cnot.png",
+    img: `${base}/images/cnot.png`,
     desc: "If control qubit = 1, flips target qubit. Used to entangle."
   }
 };
+
 // --- Beginner Glossary ---
 const GATE_GLOSSARY = [
   {
